@@ -1,0 +1,22 @@
+---
+- mystudents: 
+  - name: mohan
+    mobile: 1234
+    address: hyd
+      street: 1
+      doorno: 1
+      pincode: 500090
+
+  - name: vimal
+    mobile: 1234
+    address: hyd
+      street: 2
+      doorno: 2
+      pincode: 500091
+
+  - name: kanth
+    mobile: 1234
+    address: hyd
+      street: 3
+      doorno: 3
+      pincode: 500092
