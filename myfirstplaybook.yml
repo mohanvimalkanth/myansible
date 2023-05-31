@@ -1,18 +1,29 @@
 ---
-- hosts: all
+- hosts: All
   become: yes
   tasks: 
-   - name: I want to install webserver on nodes
+   - name: Installation of apache2 on webserver
      apt:
       name: apache2
       state: present
 
-   - name: I want to install tree on nodes
+   - name: Restarting of apache2 on webserver
+     apt:
+      name: apache2
+      state: started
+
+
+   - name: Installation of tree on appserver
      apt:
       name: tree
       state: present
 
-   - name: I want to install wget on nodes
+   - name: Installation of wget on appserver
      apt:
       name: wget
+      state: present
+
+   - name: Installation of wget on dbserver
+     apt:
+      name: java-1.8.0-openjdk
       state: present
