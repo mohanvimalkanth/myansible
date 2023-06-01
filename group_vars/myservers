@@ -1,5 +1,5 @@
 ---
-[mywebservers:vars]
+[myservers:vars]
 myvar= value 
 mywebpackforubuntu= apache2
 mywebpackforredhat= httpd
