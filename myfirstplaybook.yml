@@ -1,39 +1,26 @@
 ---
-- hosts: All
+- hosts: mywebservers
   become: yes
   gather_facts: yes
   tasks: 
    - name: Installation of apache2 on webserver (ubuntu)
      apt:
-      name: apache2
+      name: "{{mywebpackforubuntu}}"
       state: present
 
    - name: Restarting of apache2 on webserver (ubuntu)
      service:
-      name: apache2
+      name: "{{mywebpackforubuntu}}"
       state: started
 
    - name: Installation of httpd on appserver (redhat)
      ansible.builtin.dnf:
-      name: httpd
+      name: "{{mywebpackforredhat}}"
       state: present
 
    - name: Restarting of httpd on appserver (redhat)
      service:
-      name: httpd
+      name: "{{mywebpackforredhat}}"
       state: present
 
-   - name: Installation of tree on appserver (redhat)
-     ansible.builtin.dnf:
-      name: tree
-      state: present
-
-   - name: Installation of wget on appserver (redhat)
-     ansible.builtin.dnf:
-      name: wget
-      state: present
-
-   - name: Installation of wget on dbserver (redhat)
-     ansible.builtin.dnf:
-      name: java-1.8.0-openjdk
-      state: present
+  
