@@ -1,0 +1,28 @@
+---
+- hosts: mywebservers
+  become: yes
+  gather_facts: yes
+  tasks: 
+   - name: Installation of apache2 on webserver (ubuntu)
+     apt:
+      name: apache2
+      state: present
+     when: ansible_os_family =="Debian"
+
+   - name: Restarting of apache2 on webserver (ubuntu)
+     service:
+      name: apache2
+      state: started
+     when: ansible_os_family =="Debian"
+
+   - name: Installation of httpd on appserver (redhat)
+     ansible.builtin.dnf:
+      name: httpd
+      state: present
+     when: ansible_os_family =="RedHat"
+
+   - name: Restarting of httpd on appserver (redhat)
+     service:
+      name: httpd
+      state: present
+     when: ansible_os_family =="RedHat"
