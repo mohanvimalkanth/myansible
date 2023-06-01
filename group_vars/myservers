@@ -1,0 +1,6 @@
+---
+myvar: value
+mywebpackforubuntu: apache2
+mywebpackforredhat: httpd
+myjavapackforubuntu: default-jdk
+myjavapackforredhat: java-1.8.0-openjdk
