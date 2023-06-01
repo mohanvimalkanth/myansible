@@ -16,7 +16,7 @@
      when: ansible_os_family =="Debian"
 
    - name: Installation of httpd on appserver (redhat)
-     ansible.builtin.dnf:
+     ansible.builtin.yum:
       name: httpd
       state: present
      when: ansible_os_family =="RedHat"
@@ -24,5 +24,5 @@
    - name: Restarting of httpd on appserver (redhat)
      service:
       name: httpd
-      state: present
+      state: started
      when: ansible_os_family =="RedHat"
