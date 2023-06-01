@@ -7,20 +7,24 @@
      apt:
       name: "{{mywebpackforubuntu}}"
       state: present
+     when: ansible_os_family =="Debian"
 
    - name: Restarting of apache2 on webserver (ubuntu)
      service:
       name: "{{mywebpackforubuntu}}"
       state: started
+     when: ansible_os_family =="Debian"
 
    - name: Installation of httpd on appserver (redhat)
      ansible.builtin.dnf:
       name: "{{mywebpackforredhat}}"
       state: present
+     when: ansible_os_family =="RedHat"
 
    - name: Restarting of httpd on appserver (redhat)
      service:
       name: "{{mywebpackforredhat}}"
       state: present
+     when: ansible_os_family =="RedHat"
 
   
