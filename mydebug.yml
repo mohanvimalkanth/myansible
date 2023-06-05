@@ -2,5 +2,5 @@
  - hosts: 172.31.6.247
    become: yes
    tasks:
-     name: execute linux command by using playbook
-     command: hostname -f
+    - name: execute linux command by using playbook
+      command: hostname -f
