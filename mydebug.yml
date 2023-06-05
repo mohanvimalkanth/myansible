@@ -4,3 +4,8 @@
    tasks:
     - name: execute linux command by using playbook
       command: hostname -f
+      register: myfirsttaskresult
+
+    - name: I want to debug the above command
+      debug:
+        msg: "{{myfirsttaskresult}}"
