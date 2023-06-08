@@ -22,3 +22,9 @@
      template: 
         src: myindex.j2
         dest: /var/www/html/index.html
+
+   - name: I want to restart the web server
+     service: 
+       name: apache2
+       state: restarted
+
