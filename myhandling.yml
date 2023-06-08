@@ -23,6 +23,7 @@
         src: myindex.j2
         dest: /var/www/html/index.html
 
+  handlers:
    - name: I want to restart the web server
      service: 
        name: apache2
