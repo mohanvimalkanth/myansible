@@ -25,7 +25,7 @@
      notify: restartwebserver
 
   handlers:
-  - name: restartwebserver
+   - name: restartwebserver
      service: 
        name: apache2
        state: restarted
