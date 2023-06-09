@@ -1,8 +1,8 @@
 ---
 - name: Downloading tomcat
   get_url:
-    url: https://www-eu.apache.org/dist/tomcat/tomcat-10/v10.1.9/bin/apache-tomcat-10.1.9.tar.gz
-    dest: /home/ubuntu/apache-tomcat-10.1.9.tar.gz
+    url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+    dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz
     force_basic_auth: yes
 
 - name: creating a tomcat folder
@@ -11,7 +11,7 @@
     State: directory
 
 
-- name: Extract apache-tomcat-10.1.9.tar.gz into /opt/tomcat/
+- name: Extract apache-tomcat-10.0.20.tar.gz into /opt/tomcat/
   command:
-   cmd: sudo tar -xf /home/ubuntu/apache-tomcat-10.1.9.tar.gz -C /opt/tomcat/
+   cmd: sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
    creates: /opt/tomcat/LICENCE
