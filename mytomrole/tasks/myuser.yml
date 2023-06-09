@@ -4,4 +4,4 @@
     name: tomcat
     shell: /bin/false
     home: /opt/tomcat
-    State: present
+    state: present
