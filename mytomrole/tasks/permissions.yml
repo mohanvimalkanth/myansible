@@ -1,7 +1,7 @@
 ---
 - name: Grant Tomcat Ownership
-  command: "sudo chown -R tomcat: /opt/tomcat"
+  command: sudo chown -R tomcat:tomcat /opt/tomcat/
 
 
 - name: Grant execute Tomcat permissions on bin folder
-  command: sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+  command: sudo chmod -R u+x /opt/tomcat/bin
