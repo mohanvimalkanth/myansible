@@ -10,7 +10,7 @@
       wait: yes
       group: launch-wizard-1
       count: 2
-      region: us-east-2
+      region: us-east-2a
       vpc_subnet_id: vpc-0455856c1a90bfd52
       assign_public_ip: yes
       instance_tags:
