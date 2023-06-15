@@ -6,7 +6,7 @@
     amazon.aws.ec2_instance:
        key_name: mykeypair27may23.pem
        instance_type: t2.micro
-       image: ami-0c699aef4fdbcfe98
+       image: ami-0638cdee28f295709
        wait: yes
        group: launch-wizard-1
        count: 2
